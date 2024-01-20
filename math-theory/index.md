@@ -40,7 +40,8 @@
 
 其他常见的积性函数：
 
-4. 欧拉函数 $\varphi(n)=\sum\limits_{i=1}^n[\gcd(i,n)=1]$。
+4. 欧拉函数 $\varphi(n)=\sum\limits_{i=1}^n[\gcd(i,n)=1]$；
+5. 莫比乌斯函数 $\mu$。
 
 ## 狄利克雷卷积
 
@@ -54,3 +55,70 @@ $$
 
 则我们称 $h=f*g$，其中 $*$ 为两个函数进行 **狄利克雷卷积**（Dirichlet product）得到的结果。
 
+### 性质
+
+1. 满足交换律、结合律和分配律；
+
+> 狄利克雷卷积满足结合律的证明：
+> 
+> 设 $f,g,h$ 是三个函数，则 $[(f*g)*h](x)=\sum\limits_{ik=x}(f*g)(i)h(k)=\sum\limits_{ijk=x}f(i)g(j)h(k)$。同理 $[f*(g*h)](x)=\sum\limits_{ijk=x}f(i)g(j)h(k)$。所以狄利克雷卷积满足结合律。
+
+2. $\varepsilon$ 是狄利克雷卷积的单位元，即 $f*\varepsilon=f$。
+
+## 莫比乌斯函数
+
+### 定义
+
+定义一：莫比乌斯函数（Möbius function）$\mu$ 满足 $\mu*1=\varepsilon$，即对于任意正整数 $n$ 都满足
+
+$$
+\sum_{d|n}\mu(d)=[n=1].
+$$
+
+定义二：若正整数 $n$ 有 $x$ 个本质不同质因子，则
+
+$$
+\mu(n)=\begin{cases}
+1,      & n=1                \\
+0,      & \exists\ d>1,d^2|n \\
+(-1)^x, & \text{otherwise}
+\end{cases}.
+$$
+
+> 两个定义等价的证明：
+> 
+> 若已知定义一，则因为 $\varepsilon(n)=[n=1]$ 是积性函数，由积性函数的性质可知 $\mu$ 也是积性函数。
+> 
+> 对于素数 $p$ 和正整数 $k$，由定义一可知
+> 
+> $$
+> \mu(1)+\mu(p)+\mu\left(p^2\right)+\cdots+\mu\left(p^k\right)=\mu(1)+\mu(p)+\mu\left(p^2\right)+\cdots+\mu\left(p^{k+1}\right)=0.
+> $$
+> 
+> 易知 $\mu(1)=1$，$\mu\left(p^{k+1}\right)=0$，所以 $\mu(p)=1$。即对于任意素数 $p$ 和正整数 $k$，都有 $\mu(p)=1$，$\mu\left(p^k\right)=0$。又因为 $\mu$ 是积性函数，所以定义二成立。
+> 
+> 若已知定义二则分解质因数容易得到定义一。
+
+### 线性筛求莫比乌斯函数值
+
+因为莫比乌斯函数是积性函数，所以可以使用线性筛来求莫比乌斯函数值。
+
+```cpp
+bool vis[100001];
+int mu[100001],cntPrime,prime[100001];
+
+void calcMu(int n=100000){
+    mu[1]=1;
+    for(int i=2;i<=n;i++){
+        if(!vis[i])prime[++cntPrime]=i,mu[i]=-1;
+        for(int j=1;j<=cntPrime&&i*prime[j]<=n;j++){
+            vis[i*prime[j]]=true;
+            if(i%prime[j]==0){
+                mu[i*prime[j]]=0;
+                break;
+            }
+            mu[i*prime[j]]=-mu[i];
+        }
+    }
+}
+```
