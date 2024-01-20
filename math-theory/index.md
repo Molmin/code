@@ -122,3 +122,17 @@ void calcMu(int n=100000){
     }
 }
 ```
+
+{{ problem.P2522.begin }}
+
+### 例题 P2522 \[HAOI2011\] Problem B
+
+$T$ 组数据，给定 $a,b,c,d,k$，求
+
+$$
+\sum_{i=a}^b\sum_{j=c}^d[\gcd(i,j)=k].
+$$
+
+数据范围：$1\leq T,a,b,c,d,k\leq 5\times 10^4$。
+
+{{ problem.P2522.end }}
