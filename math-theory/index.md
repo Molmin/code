@@ -53,7 +53,7 @@ $$
 h(x)=\sum_{d|x}f(d)g\left(\dfrac xd\right)=\sum_{ij=x}{f(i)g(j)}.
 $$
 
-则我们称 $h=f*g$，其中 $*$ 为两个函数进行 **狄利克雷卷积**（Dirichlet product）得到的结果。
+则我们称 $h=f\ast g$，其中 $\ast$ 为两个函数进行 **狄利克雷卷积**（Dirichlet product）得到的结果。
 
 ### 性质
 
@@ -61,15 +61,29 @@ $$
 
 > 狄利克雷卷积满足结合律的证明：
 > 
-> 设 $f,g,h$ 是三个函数，则 $[(f*g)*h](x)=\sum\limits_{ik=x}(f*g)(i)h(k)=\sum\limits_{ijk=x}f(i)g(j)h(k)$。同理 $[f*(g*h)](x)=\sum\limits_{ijk=x}f(i)g(j)h(k)$。所以狄利克雷卷积满足结合律。
+> 设 $f,g,h$ 是三个函数，则 $[(f\ast g)\ast h](x)=\sum\limits_{ik=x}(f\ast g)(i)h(k)=\sum\limits_{ijk=x}f(i)g(j)h(k)$。同理 $[f\ast(g\ast h)](x)=\sum\limits_{ijk=x}f(i)g(j)h(k)$。所以狄利克雷卷积满足结合律。
 
-2. $\varepsilon$ 是狄利克雷卷积的单位元，即 $f*\varepsilon=f$。
+2. $\varepsilon$ 是狄利克雷卷积的单位元，即 $f\ast\varepsilon=f$。
+
+### 常见结论
+
+结论一：$\varphi\ast 1=\operatorname{id}$。
+
+> 证明：要证 $\varphi\ast 1=\operatorname{id}$，即要证 $\sum\limits_{d|n}\varphi(d)=n$。
+> 
+> 当 $n=1$ 时，结论显然成立。
+> 
+> 对于素数 $p$ 和正整数 $k$，有 $\sum\limits_{d|p^k}\varphi(d)=\varphi(1)+\varphi(p)+\varphi\left(p^2\right)+\cdots+\varphi\left(p^k\right)=1+(p-1)+\left(p^2-p\right)+\cdots+\left(p^k-p^{k-1}\right)=p^k$，即结论对 $p^k$ 成立。
+> 
+> 对于 $n,m$ 满足 $\gcd(n,m)=1$，有 $\sum\limits_{d|nm}\varphi(d)=\sum\limits_{i|n,j|m}\varphi(ij)=\sum\limits_{i|n}\varphi(i)\sum\limits_{j|m}\varphi(j)=nm$，即结论对 $nm$ 成立。
+> 
+> 由此可得对于任意正整数 $n$，上述结论都成立。
 
 ## 莫比乌斯函数
 
 ### 定义
 
-定义一：莫比乌斯函数（Möbius function）$\mu$ 满足 $\mu*1=\varepsilon$，即对于任意正整数 $n$ 都满足
+定义一：莫比乌斯函数（Möbius function）$\mu$ 满足 $\mu\ast 1=\varepsilon$，即对于任意正整数 $n$ 都满足
 
 $$
 \sum_{d|n}\mu(d)=[n=1].
@@ -123,7 +137,7 @@ void calcMu(int n=100000){
 }
 ```
 
-{{ problem.P2522.begin }}
+<!-- problem.P2522.begin -->
 
 ### 例题 P2522 \[HAOI2011\] Problem B
 
@@ -135,4 +149,29 @@ $$
 
 数据范围：$1\leq T,a,b,c,d,k\leq 5\times 10^4$。
 
-{{ problem.P2522.end }}
+<!-- problem.P2522.end -->
+
+## 莫比乌斯反演
+
+### 定义
+
+设 $f,g$ 为数论函数，那么有：
+
+- 结论一：若 $f(n)=\sum\limits_{d|n}g(d)\Leftrightarrow f=g\ast 1$，则 $g(n)=\sum\limits_{d|n}\mu(d)f\left(\dfrac nd\right)\Leftrightarrow g=f\ast\mu$，此时函数 $f$ 称为函数 $g$ 的 **莫比乌斯变换**（Möbius transformation），函数 $g$ 称为数论函数 $f$ 的 **莫比乌斯反演**（Möbius inversion）；
+- 结论二：若 $f(n)=\sum\limits_{n|d}g(d)$，则 $g(n)=\sum\limits_{n|d}\mu\left(\dfrac{d}{n}\right)f(d)$。
+
+> 两个结论的证明：
+> 
+> 对于结论一，将 $f=g\ast 1$ 两边同时与 $\mu$ 做卷积可得 $f\ast\mu=g\ast(1\ast\mu)=g\ast\varepsilon=g$。
+> 
+> 对于结论二，考虑从结果开始推导。
+> 
+> 枚举 $k$ 表示 $d$ 是 $n$ 的多少倍，则 $\sum\limits_{n|d}\mu\left(\dfrac dn\right)f(d)=\sum\limits_{k=1}^{+\infty}\mu(k)f(kn)=\sum\limits_{k=1}^{+\infty}\mu(k)\sum\limits_{kn|d}g(d)$。
+> 
+> 变换枚举顺序，可得上式等于 $\sum\limits_{n|d}g(d)\sum\limits_{k|\frac nd}\mu(k)=\sum\limits_{n|d}g(d)\left[\dfrac nd=1\right]=g(n)$。
+> 
+> 至此，两个结论均得证。
+
+### 应用
+
+我们已经知道 $\varphi\ast 1=\operatorname{id}$，对其使用莫比乌斯反演，可得 $\varphi=\operatorname{id}\ast\mu$。
