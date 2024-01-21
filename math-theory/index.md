@@ -175,3 +175,17 @@ $$
 ### 应用
 
 我们已经知道 $\varphi\ast 1=\operatorname{id}$，对其使用莫比乌斯反演，可得 $\varphi=\operatorname{id}\ast\mu$。
+
+<!-- problem.BZOJ2226.begin -->
+
+### 例题 BZOJ2226 LCM Sum
+
+$T$ 组数据，给定 $n$，求
+
+$$
+\sum_{i=1}^n\operatorname{lcm}(i,n).
+$$
+
+数据范围：$1\leq T\leq 3\times 10^5$，$1\leq n\leq 10^6$。
+
+<!-- problem.BZOJ2226.end -->
