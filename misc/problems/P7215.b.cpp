@@ -1,7 +1,7 @@
-/* 
+/**
  * @date: 2024.01.18
  * @problem: P7215
- * @algo: 建图 + Tarjan 缩点
+ * @tags: 图论, 缩点
  * @note: 没写完
  */
 

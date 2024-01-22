@@ -1,7 +1,7 @@
-/* 
+/**
  * @date: 2024.01.22
  * @problem: BZOJ2226
- * @algo: 莫比乌斯函数
+ * @tags: 数学, 数论, 线性筛
  */
 
 #include<bits/stdc++.h>

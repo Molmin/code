@@ -1,7 +1,7 @@
-/* 
+/**
  * @date: 2024.01.20
  * @problem: P7215
- * @algo: 莫比乌斯函数
+ * @tags: 数学, 数论, 莫比乌斯函数, 整除分块
  */
 
 #include<bits/stdc++.h>

@@ -1,7 +1,7 @@
-/* 
+/**
  * @date: 2024.01.10
  * @problem: P7215
- * @algo: 点分治
+ * @tags: 图论, 点分治
  */
 
 #include<bits/stdc++.h>

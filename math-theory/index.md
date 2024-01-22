@@ -43,6 +43,20 @@
 4. 欧拉函数 $\varphi(n)=\sum\limits_{i=1}^n[\gcd(i,n)=1]$；
 5. 莫比乌斯函数 $\mu$。
 
+<!-- problem.BZOJ2226.begin -->
+
+### 例题 BZOJ2226 LCM Sum
+
+$T$ 组数据，给定 $n$，求
+
+$$
+\sum_{i=1}^n\operatorname{lcm}(i,n).
+$$
+
+数据范围：$1\leq T\leq 3\times 10^5$，$1\leq n\leq 10^6$。
+
+<!-- problem.BZOJ2226.end -->
+
 ## 狄利克雷卷积
 
 ### 定义
@@ -176,16 +190,16 @@ $$
 
 我们已经知道 $\varphi\ast 1=\operatorname{id}$，对其使用莫比乌斯反演，可得 $\varphi=\operatorname{id}\ast\mu$。
 
-<!-- problem.BZOJ2226.begin -->
+<!-- problem.P1829.begin -->
 
-### 例题 BZOJ2226 LCM Sum
+### 例题 P1829 \[国家集训队\] Crash 的数字表格 / JZPTAB
 
-$T$ 组数据，给定 $n$，求
+给定 $n,m$，求下式模 $20101009$（一个素数）的值：
 
 $$
-\sum_{i=1}^n\operatorname{lcm}(i,n).
+\sum_{i=1}^n\sum_{j=1}^m\operatorname{lcm}(i,j).
 $$
 
-数据范围：$1\leq T\leq 3\times 10^5$，$1\leq n\leq 10^6$。
+数据范围：$1\leq n,m\leq 10^7$。
 
-<!-- problem.BZOJ2226.end -->
+<!-- problem.P1829.end -->
