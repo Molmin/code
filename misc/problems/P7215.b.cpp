@@ -1,6 +1,6 @@
 /**
  * @date: 2024.01.18
- * @problem: P7215
+ * @problem: P7215, UOJ510
  * @tags: 图论, 缩点
  * @note: 没写完
  */
