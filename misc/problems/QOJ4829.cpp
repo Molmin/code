@@ -2,7 +2,6 @@
  * @date: 2024.01.22
  * @problem: QOJ4829
  * @tags: 图论, 通信
- * @note: It can't be accepted
  */
 
 #include<bits/stdc++.h>
@@ -24,14 +23,13 @@ int main(){
     }
     for(int i=1;i<=n;i++)x[i]=i;
     sort(x+1,x+1+n,[&](int x,int y){return deg[x]>deg[y];});
-    reverse(x+1,x+1+k);
+    sort(x+1,x+1+k); // Prepare for the function next_permutation
     do{
         bool flag=true;
         for(int i=1;i<=k;i++)
             if(S.find({x[i],x[i==k?1:i+1]})==S.end())flag=false;
         if(flag)return printf("ok"),0;
     }while(next_permutation(x+1,x+1+k));
-    sort(x+1,x+1+k);
     vector<pair<int,int> > vec;
     for(int i=1;i<=k;i++){
         int u=x[i],v=x[i==k?1:i+1];
