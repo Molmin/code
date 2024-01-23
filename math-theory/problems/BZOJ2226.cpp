@@ -1,6 +1,6 @@
 /**
  * @date: 2024.01.22
- * @problem: BZOJ2226, SPLCMSUM
+ * @problem: BZOJ2226, SP_LCMSUM
  * @tags: 数学, 数论, 线性筛
  */
 
