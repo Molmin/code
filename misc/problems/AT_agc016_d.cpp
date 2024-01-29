@@ -1,7 +1,7 @@
 /**
  * @date: 2024.01.23
  * @problem: AT_agc016_d
- * @tags: 操作问题
+ * @tags: 思维, 操作问题
  */
 
 #include<bits/stdc++.h>

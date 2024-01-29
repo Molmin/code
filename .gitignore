@@ -4,3 +4,4 @@
 *.ans
 contest
 tmp
+*.ignore.*
