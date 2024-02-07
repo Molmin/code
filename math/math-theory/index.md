@@ -203,3 +203,19 @@ $$
 数据范围：$1\leq n,m\leq 10^7$。
 
 <!-- problem.P1829.end -->
+
+<!-- problem.P3327.begin -->
+
+### 例题 P3327 \[SDOI2015\] 约数个数和
+
+$T$ 组数据，给定 $n,m$，求：
+
+$$
+\sum_{i=1}^n\sum_{j=1}^md(ij).
+$$
+
+其中 $d(x)$ 表示 $x$ 的约数个数。
+
+数据范围：$1\leq T,n,m\leq 5\times 10^4$。
+
+<!-- problem.P3327.end -->
