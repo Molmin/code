@@ -151,20 +151,6 @@ void calcMu(int n=100000){
 }
 ```
 
-<!-- problem.P2522.begin -->
-
-### 例题 P2522 \[HAOI2011\] Problem B
-
-$T$ 组数据，给定 $a,b,c,d,k$，求
-
-$$
-\sum_{i=a}^b\sum_{j=c}^d[\gcd(i,j)=k].
-$$
-
-数据范围：$1\leq T,a,b,c,d,k\leq 5\times 10^4$。
-
-<!-- problem.P2522.end -->
-
 ## 莫比乌斯反演
 
 ### 定义
@@ -189,6 +175,20 @@ $$
 ### 应用
 
 我们已经知道 $\varphi\ast 1=\operatorname{id}$，对其使用莫比乌斯反演，可得 $\varphi=\operatorname{id}\ast\mu$。
+
+<!-- problem.P2522.begin -->
+
+### 例题 P2522 \[HAOI2011\] Problem B
+
+$T$ 组数据，给定 $a,b,c,d,k$，求
+
+$$
+\sum_{i=a}^b\sum_{j=c}^d[\gcd(i,j)=k].
+$$
+
+数据范围：$1\leq T,a,b,c,d,k\leq 5\times 10^4$。
+
+<!-- problem.P2522.end -->
 
 <!-- problem.P1829.begin -->
 
@@ -219,3 +219,7 @@ $$
 数据范围：$1\leq T,n,m\leq 5\times 10^4$。
 
 <!-- problem.P3327.end -->
+
+## 杜教筛
+
+**杜教筛** 是一个可以用于快速求数论函数的前缀和的算法，时间复杂度是亚线性的。
