@@ -10,7 +10,7 @@ const long long mod=998244353;
 
 struct Matrix{
     int n,m;
-    vector<vector<int> > data;
+    vector<vector<int>> data;
     int val(int i,int j){
         return data[i][j];
     }

@@ -8,7 +8,7 @@
 using namespace std;
 
 int n,m;
-vector<pair<pair<int,int>,int> > edge;
+vector<pair<pair<int,int>,int>> edge;
 vector<int> E[1001];
 vector<int> toHandle[1001];
 

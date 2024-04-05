@@ -12,7 +12,7 @@ int n=7,w[8];
 
 struct Matrix{
     int n,m;
-    vector<vector<int> > data;
+    vector<vector<int>> data;
     void init(int a,int b){
         n=a,m=b;
         data.clear();

@@ -11,7 +11,7 @@ int n,m;
 long long a[1000001],b[1000001];
 long long s[1000001],t[1000001];
 int p[1000001],q[1000001];
-vector<pair<int,long long> > vec[1000001];
+vector<pair<int,long long>> vec[1000001];
 map<int,long long> diff;
 
 inline bool cmp(pair<int,long long> x,pair<int,long long> y){

@@ -49,7 +49,7 @@ void initSize(int id,int father){
 ull calcHash(int id,int father){
     siz[id]=1;
     ull res=1;
-    vector<pair<int,ull> > vec;
+    vector<pair<int,ull>> vec;
     for(int i=head[id];i;i=edge[i].nxt){
         int v=edge[i].to;
         if(v==father||cut[v])continue;

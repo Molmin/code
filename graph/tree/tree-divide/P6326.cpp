@@ -50,7 +50,7 @@ void solve(int id){
     memset(dp[cntdfn+1],0,sizeof dp[cntdfn+1]);
     for(int i=cntdfn;i>=1;i--){
         memset(dp[i],0,sizeof dp[i]);
-        vector<pair<int,int> > vec;
+        vector<pair<int,int>> vec;
         int pos=rnk[i],cnt=d[pos]-1;
         for(int k=1;k<=cnt;k<<=1)
             vec.push_back({k*w[pos],k*c[pos]}),cnt-=k;

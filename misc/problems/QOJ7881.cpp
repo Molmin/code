@@ -18,7 +18,7 @@ inline long long G(long long x){
 }
 
 void init(long long n){
-    priority_queue<long long,vector<long long>,greater<long long> > Q;
+    priority_queue<long long,vector<long long>,greater<long long>> Q;
     pos[++cnt]=0;
     while(pos[cnt]<n){
         while(!Q.empty()&&Q.top()<=pos[cnt])Q.pop();

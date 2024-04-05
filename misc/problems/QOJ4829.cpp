@@ -9,7 +9,7 @@ using namespace std;
 const int k=5;
 
 int n,m;
-set<pair<int,int> > S;
+set<pair<int,int>> S;
 int deg[1001],x[1001];
 
 int main(){
@@ -30,7 +30,7 @@ int main(){
             if(S.find({x[i],x[i==k?1:i+1]})==S.end())flag=false;
         if(flag)return printf("ok"),0;
     }while(next_permutation(x+1,x+1+k));
-    vector<pair<int,int> > vec;
+    vector<pair<int,int>> vec;
     for(int i=1;i<=k;i++){
         int u=x[i],v=x[i==k?1:i+1];
         if(S.find({u,v})==S.end())vec.push_back({u,v});

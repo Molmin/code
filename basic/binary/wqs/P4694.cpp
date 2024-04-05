@@ -10,7 +10,7 @@ using namespace std;
 int n,k,a[500001],b[500001];
 
 pair<long long,int> calc(int mid){
-    priority_queue<pair<long long,bool> > Q;
+    priority_queue<pair<long long,bool>> Q;
     long long answer=0;
     int total=0;
     for(int i=1;i<=n;i++){

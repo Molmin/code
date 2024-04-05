@@ -48,7 +48,7 @@ void solve(int id){
         while(!clearInTree.empty())
             inTree[clearInTree.front()]=false,clearInTree.pop();
         {
-            queue<pair<int,int> > Q; Q.push({id,0});
+            queue<pair<int,int>> Q; Q.push({id,0});
             while(!Q.empty()){
                 pair<int,int> x=Q.front(); Q.pop();
                 inTree[x.first]=true,clearInTree.push(x.first);
