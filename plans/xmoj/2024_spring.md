@@ -91,9 +91,9 @@
 - [x] [BZOJ3653 谈笑风生](https://hydro.ac/d/bzoj/p/3653)
 - [x] [P5904 [POI2014] HOT-Hotels（加强版）](https://www.luogu.com.cn/problem/P5904)
 - [x] [P6815 [PA2009] Cakes](https://www.luogu.com.cn/problem/P6815)
-- [ ] [BZOJ3500 [PA2008] Cliquers](https://hydro.ac/d/bzoj/p/3500)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
+- [x] [BZOJ3500 [PA2008] Cliquers](https://hydro.ac/d/bzoj/p/3500)
+- [ ] [BZOJ3501 [PA2008] Cliquers Strike Back](https://hydro.ac/d/bzoj/p/3501)
+- [ ] [BZOJ3515 EvenPaths](https://hydro.ac/d/bzoj/p/3515)
 
 [1 月 1 日：标题](https://www.xmoj.tech/contest.php?cid=1111)
 
@@ -109,3 +109,5 @@
 https://hydro.ac/d/bzoj/record/6603fe93df83dbd698ed6585 = https://hydro.ac/d/luogu/record/6603fecd3ad578283ec79e76
 
 https://hydro.ac/d/luogu/record/664b3c8cb4ef9f2284ca9e9f
+
+https://qoj.ac/problem/6504 = https://hydro.ac/d/milmon/p/Z20230721D
