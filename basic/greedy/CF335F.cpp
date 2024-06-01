@@ -39,8 +39,7 @@ int main(){
             }
         }
         while(!handlePush.empty())Q.push(-handlePush.front()),handlePush.pop();
-        for(int j=1;j+shouldBuy<=t[i];j++)
-            Q.push(-c[i]);
+        for(int j=1;j+shouldBuy<=t[i];j++)Q.push(-c[i]);
         sum+=t[i];
     }
     while(!Q.empty())answer+=Q.top(),Q.pop();
