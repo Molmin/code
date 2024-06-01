@@ -111,3 +111,5 @@ https://hydro.ac/d/bzoj/record/6603fe93df83dbd698ed6585 = https://hydro.ac/d/luo
 https://hydro.ac/d/luogu/record/664b3c8cb4ef9f2284ca9e9f
 
 https://qoj.ac/problem/6504 = https://hydro.ac/d/milmon/p/Z20230721D
+
+https://qoj.ac/problem/7903
