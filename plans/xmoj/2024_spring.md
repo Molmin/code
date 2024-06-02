@@ -76,8 +76,8 @@
 [5 月 18 日：线段树分治](https://www.xmoj.tech/contest.php?cid=7231)
 
 - [x] [P5787 二分图 / 【模板】线段树分治](https://www.luogu.com.cn/problem/P5787)
-- [ ] [LOJ121 「离线可过」动态图连通性](https://loj.ac/p/121)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
+- [x] [LOJ121 「离线可过」动态图连通性](https://loj.ac/p/121)
+- [x] [P5214 [SHOI2014] 神奇化合物](https://www.luogu.com.cn/problem/P5214)
 - [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
 - [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
 - [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
@@ -88,7 +88,7 @@
 
 - [ ] [P5903 【模板】树上 K 级祖先](https://www.luogu.com.cn/problem/P5903)
 - [x] [CF1009F Dominant Indices](https://www.luogu.com.cn/problem/CF1009F)
-- [x] [BZOJ3653 谈笑风生](https://hydro.ac/d/bzoj/p/3653)
+- [x] [P3899 [湖南集训] 更为厉害](https://www.luogu.com.cn/problem/P3899)
 - [x] [P5904 [POI2014] HOT-Hotels（加强版）](https://www.luogu.com.cn/problem/P5904)
 - [x] [P6815 [PA2009] Cakes](https://www.luogu.com.cn/problem/P6815)
 - [x] [BZOJ3500 [PA2008] Cliquers](https://hydro.ac/d/bzoj/p/3500)
