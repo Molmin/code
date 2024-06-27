@@ -95,16 +95,18 @@
 - [ ] [BZOJ3501 [PA2008] Cliquers Strike Back](https://hydro.ac/d/bzoj/p/3501)
 - [ ] [BZOJ3515 EvenPaths](https://hydro.ac/d/bzoj/p/3515)
 
-[1 月 1 日：标题](https://www.xmoj.tech/contest.php?cid=1111)
+[6 月 1 日：虚树计算](https://www.xmoj.tech/contest.php?cid=7259)
 
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
-- [ ] [P1001 Title](https://www.luogu.com.cn/problem/P1001)
+[6 月 8 日：A\* / IDA\*](https://www.xmoj.tech/contest.php?cid=7279)
+
+- [x] [P2901 [USACO08MAR] Cow Jogging G](https://www.luogu.com.cn/problem/P2901)
+- [x] [P2483 【模板】k 短路 / [SDOI2010] 魔法猪学院](https://www.luogu.com.cn/problem/P2483)（只需使用 A* 完成）
+- [x] [P2324 [SCOI2005] 骑士精神](https://www.luogu.com.cn/problem/P2324)
+- [x] [P1763 埃及分数](https://www.luogu.com.cn/problem/P1763)
+- [x] [BZOJ2372 music](https://hydro.ac/d/bzoj/p/2372)
+- [x] [BZOJ3517 翻硬币](https://hydro.ac/d/bzoj/p/3517)
+- [x] [BZOJ3518 点组计数](https://hydro.ac/d/bzoj/p/3518)
+- [x] [P3006 [USACO11JAN] Bottleneck G](https://www.luogu.com.cn/problem/P3006)
 
 https://hydro.ac/d/bzoj/record/6603fe93df83dbd698ed6585 = https://hydro.ac/d/luogu/record/6603fecd3ad578283ec79e76
 
