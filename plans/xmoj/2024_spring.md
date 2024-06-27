@@ -1,4 +1,4 @@
-[2 月 24 日：树套树](https://www.xmoj.tech/contest.php?cid=6986) （1 / 6）
+[2 月 24 日：树套树](https://www.xmoj.tech/contest.php?cid=6986) 
 
 - [x] [P3380 【模板】树套树](https://www.luogu.com.cn/problem/P3380)
 - [ ] [P3332 [ZJOI2013] K大数查询](https://www.luogu.com.cn/problem/P3332)
@@ -8,7 +8,7 @@
 - [ ] [CF204E Little Elephant and Strings](https://www.luogu.com.cn/problem/CF204E)
 - [ ] [BZOJ3280 小 R 的烦恼](https://hydro.ac/d/bzoj/p/3280)
 
-[3 月 9 日：线段树合并 & DSU on tree](https://www.xmoj.tech/contest.php?cid=7066) （5 / 8）
+[3 月 9 日：线段树合并 & DSU on tree](https://www.xmoj.tech/contest.php?cid=7066) 
 
 - [x] [CF600E Lomsat gelral](https://www.luogu.com.cn/problem/CF600E)
 - [x] [P3521 [POI2011] ROT - Tree Rotations](https://www.luogu.com.cn/problem/P3521)
