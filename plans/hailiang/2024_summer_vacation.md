@@ -25,3 +25,20 @@
 - [ ] [QOJ892 Minimal Cut](https://qoj.ac/problem/892)
 - [ ] [P6528 「Wdoi-1」完美冻结](https://www.luogu.com.cn/problem/P6528)
 - [ ] [QOJ5096 千百](https://qoj.ac/problem/5096)
+
+---
+
+## 海亮夏令营：提高转省选班
+
+[7 月 4 日：数据结构水题选讲 1](https://oj.hailiangedu.com/d/hlxly2022/homework/66852cae1706a3d130da60e4) 
+
+- [x] [CF1284D New Year and Conference](https://www.luogu.com.cn/problem/CF1284D)
+- [x] [CF1616E Lexicographically Small Enough](https://www.luogu.com.cn/problem/CF1616E)
+- [x] [P8010 「Wdsr-3」令人感伤的红雨](https://www.luogu.com.cn/problem/P8010)
+- [x] [AT_agc059_c Guessing Permutation for as Long as Possible](https://www.luogu.com.cn/problem/AT_agc059_c)
+- [x] [P10478 生日礼物](https://www.luogu.com.cn/problem/P10478)
+- [x] [P2827 [NOIP2016 提高组] 蚯蚓](https://www.luogu.com.cn/problem/P2827)
+- [x] [P7078 [CSP-S2020] 贪吃蛇](https://www.luogu.com.cn/problem/P7078)
+- [x] [P5278 算术天才⑨与等差数列](https://www.luogu.com.cn/problem/P5278)
+- [x] [P3328 [SDOI2015] 音质检测](https://www.luogu.com.cn/problem/P3328)
+- [x] [CF1583G Omkar and Time Travel](https://www.luogu.com.cn/problem/CF1583G)
