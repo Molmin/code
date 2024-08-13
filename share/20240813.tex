@@ -1,0 +1,126 @@
+\documentclass{beamer}
+
+\mode<presentation> {
+\usetheme{Berlin}
+% \usecolortheme{beaver}
+% \usecolortheme{crane}
+% \usecolortheme{dolphin}
+% \usecolortheme{lily}
+% \usecolortheme{whale}
+% \usecolortheme{wolverine}
+}
+
+\usefonttheme{professionalfonts}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[UTF8,noindent]{ctexcap}
+\usepackage[bookmarks=true]{hyperref}
+
+\title[好题分享]{好题分享}
+
+\author{Milmon}
+\institute[Hailiang Junior High School]
+{
+Hailiang Junior High School
+}
+% \date{\today}
+\date{2024 年 8 月 12 日}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{A}
+
+\begin{frame}
+\frametitle{Erdős-Ginzburg-Ziv\footnote{ETH Zurich Competitive Programming Contest Spring 2024 Problem E}}
+给定 $p - 1$ 个在 $[1, p - 1]$ 范围内的数，你需要构造一棵 $p$ 个结点的树，满足：
+\begin{itemize}
+\item $p - 1$ 条边的边权正好是给定的 $p - 1$ 个数；
+\item 令结点从 $0$ 开始编号，则对于任意 $1 \leq i < p$，结点 $0$ 到结点 $i$ 在树上的距离模 $p$ 正好等于 $i$。
+\end{itemize}
+$p$ 是素数，$p \leq 10^6$。
+\end{frame}
+
+\begin{frame}
+\frametitle{Erdős-Ginzburg-Ziv 题解}
+考虑每次找到能加的边就直接添加。\\
+\pause
+证明：设当前边权为 $w$，考虑链 $0 \to w \to 2w \to \cdots \to 0$（模 $p$ 意义下），由于 $p$ 是素数，所以上述链遍历所有点，那么一定存在相邻的两项前者在树上，并且后者不在树上。\\
+\pause
+这样我们可以得到一个 $\Theta(n^2)$ 的做法：遇到一个边权就枚举所有已经与 $0$ 号点连通的点判断是否能加入这条边。
+\end{frame}
+
+\begin{frame}
+\frametitle{Erdős-Ginzburg-Ziv 题解}
+考虑优化，设当前边权为 $w$，同样考虑链 $0 \to w \to 2w \to \cdots \to 0$（模 $p$ 意义下），链上一定存在一个边合法。\\
+\pause
+首先任意选一个不在树上的点，找到其在环上的位置，然后以 $0$ 为左端点，该位置为右端点二分，如果中点在树上就移动左端点否则移动右端点，这样左端点永远在树上，右端点永远不在树上，最终可以找到一条可以添加的边。\\
+\pause
+时间复杂度 $\Theta(n \log n)$。
+\end{frame}
+
+\section{B}
+
+\begin{frame}
+\frametitle{情书}
+给定两个字符串 $a, b$，长度分别为 $n, m$，再给定整数 $t$，设 $s$ 表示字符串 $a$ 循环 $t$ 次得到的字符串。称 $b$ 循环任意次都是好的，求 $s$ 中有多少个子串是好的。\\
+$1 \leq n, m \leq 5 \times 10^5$，$1 \leq t \leq 10^9$。
+\end{frame}
+
+\begin{frame}
+\frametitle{情书题解}
+考虑朴素的 dp，设在 $s$ 串中 $f(i)$ 表示以 $i$ 为结尾最多能匹配多少个 $b$，那么所有 $f$ 值的和就是答案。\\
+\pause
+注意到如果 $a$ 复制的若干次的 $f$ 值不受到前两个 $a$ 的影响，那么可以直接对一段 $a$ 求出贡献，然后乘上 $t$。\\
+\pause
+可能受影响的情况等价于把 $a$ 首尾相接形成 $b$ 复制若干次的结构。\\
+\pause
+判断是否是这种情况，如果是，那么 $s$ 一定形如 $Xbb\cdots bY$，其中 $X,Y$ 是零散串。直接枚举开头，求出最多向后匹配多少个 $b$ 并求组合数和即可。\\
+\pause
+时间复杂度 $\Theta(n\log n)$。（不知道可不可以 $\Theta(n)$，但不重要。）
+\end{frame}
+
+\section{C}
+
+\begin{frame}
+\frametitle{联通块}
+给定一棵 $n$ 个结点的树，对于每一种把树划分成若干个连通块的方案，设其每个连通块的大小分别是 $a_1, a_2, \cdots, a_m$，则这个划分的权值是 $\prod\limits_{i=1}^{m} a_i^k$。其中 $k$ 是给定的正整数常数。请求出所有划分的权值的和模 $998244353$。\\
+$1 \leq n, k \leq 5 \times 10^5$，$1 \leq n \times k \leq 5 \times 10^5$。
+\end{frame}
+
+\begin{frame}
+\frametitle{联通块题解}
+考虑动态规划。\\
+\pause
+记 $f(i,j)$ 表示以 $i$ 为根的子树中 $i$ 所在连通块的大小为 $j$ 时，子树内所有划分的权值之和。\\
+\pause
+转移枚举两个部分所选择的连通块大小。\\
+\pause
+时间复杂度 $\Theta(n^2)$ 同树形背包。
+\end{frame}
+
+\begin{frame}
+\frametitle{联通块题解}
+继续考虑动态规划。\\
+\pause
+记 $f(i,j)$ 表示所有 $i$ 为根的子树的划分方案中，$i$ 所在连通块的大小的 $j$ 次方乘上其他连通块的大小的 $k$ 次方的总和。\\
+\pause
+考虑组合意义：$k$ 次方相当于在连通块中选取 $k$ 次任意点。\\
+\pause
+转移时枚举在一个部分中选择的点的数量，系数是一个组合数。\\
+\pause
+总时间复杂度 $\Theta(n k^2)$。
+\end{frame}
+
+\begin{frame}
+\frametitle{联通块题解}
+一个方案是，当 $n \leq 5000$ 时选择第一种 dp，当 $n > 5000$ 时 $k \leq 100$，选择第二种 dp。\\
+\pause
+也可以将第二种 dp 的转移使用 NTT 优化，时间复杂度变为 $\Theta(nk \log k)$。
+\end{frame}
+
+\end{document} 
